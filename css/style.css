@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Itim&family=Junge&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    /*Cores do header*/
+    --cor-primaria: #0578A6;
+    --cor-secundaria: #022E40;
+
+    /*Fonte principal*/
+    --fonte-principal: "Merriweather Sans";
+}
+header{
+    background-image: linear-gradient(to right, var(--cor-primaria), var(--cor-secundaria));
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    color: white;
+    position: sticky;
+    top: 0;
+    padding: 15px 0 15px;
+    transition: .4s;
+    font-family: var(--fonte-principal);
+}
+header.scroll{
+    padding-top: 0;
+}
+header.scroll .content-right{
+    gap: 15px;
+}
+.logo{
+    height: 150px;
+    width: 150px;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.content-right .title{
+    width: 100%;
+}
+.content-right .title h1{
+    border-bottom: 1px solid white;
+    font-size: 3vw;
+    text-align: center;
+    padding: 10px;
+}
+.content-right{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    transition: .4s;
+}
+.content-menu ul{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 1.7vw;
+}
+.content-menu li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    border-bottom: 1px solid transparent;
+    white-space: nowrap;
+}
+.content-menu li a:hover{
+    border-bottom: 1px solid white;
+    transition: .4s ease-in-out;
+}
+.line{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    display: flex;
+    margin: 3px;
+}
+.menuMobile{
+    border: 1px solid white;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+}
+#closeMenu{
+    font-size: 0;
+}
+.LogoInMenu{
+    display: none;
+}
+
+@media (max-width: 700px){
+    .menuMobile{
+        display: flex;
+    }
+    .content-right{
+        width: 100%;
+        gap: 15px;
+    }
+    .content-right .title h1{
+        font-size: 6vw;
+    }
+    .menu{
+        padding: 15px;
+        position: absolute;
+        background-color: #001b26de;
+        height: 100vh;
+        backdrop-filter: blur(7px);
+        top: 0;
+        width: 0;
+        right: 0;
+        overflow: hidden;
+        visibility: hidden;
+        transition: .4s cubic-bezier(0.42, 0, 0.16, 2.45);
+    }
+    .LogoInMenu{
+        display: flex;
+        justify-content: center;
+        height: 200px;
+        align-items: center;
+    }
+    .menu.ativeMenu{
+        height: 100vh;
+        width: 65vw;
+        overflow: visible;
+        visibility: visible;
+    }
+    .menu.ativeMenu #closeMenu{
+        transform: rotate(360deg);
+        transition: .6s cubic-bezier(0.42, 0, 0, 2.12);
+    }
+    #closeMenu{
+        color: red;
+        font-size: 10vw !important;
+    }
+    .menu .content-menu ul{
+        display: flex;
+        flex-direction: column;
+        font-size: 6vw;
+        padding: 15px;
+        gap: 30px;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+}
