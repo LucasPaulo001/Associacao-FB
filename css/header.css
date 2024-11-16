@@ -20,13 +20,13 @@ header{
     align-items: center;
     color: white;
     position: sticky;
+    z-index: 2;
     top: 0;
-    padding: 15px 0 15px;
-    transition: .4s;
+    transition: .2s;
     font-family: var(--fonte-principal);
 }
 header.scroll{
-    padding-top: 0;
+    padding: 0;
 }
 header.scroll .content-right{
     gap: 15px;
@@ -39,6 +39,10 @@ header.scroll .content-right{
     height: 100%;
     width: 100%;
     object-fit: contain;
+}
+.iconMobile span{
+    font-size: 30px;
+    display: flex;
 }
 .content-right .title{
     width: 100%;
@@ -53,6 +57,7 @@ header.scroll .content-right{
     display: flex;
     flex-direction: column;
     gap: 30px;
+    padding-bottom: 10px;
     align-items: center;
     transition: .4s;
 }
@@ -104,6 +109,10 @@ header.scroll .content-right{
 @media (max-width: 700px){
     .menuMobile{
         display: flex;
+    }
+    .logo {
+        height: 100px;
+        width: 150px;
     }
     .content-right{
         width: 100%;

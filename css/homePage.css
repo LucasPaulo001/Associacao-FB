@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Itim&family=Junge&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    /*Cores do header*/
+    --cor-primaria: #0578A6;
+    --cor-secundaria: #022E40;
+    --cor-About: #022E40;
+    /*Fonte principal*/
+    --fonte-principal: "Merriweather Sans";
+}
+body{
+    background-color: var(--cor-About);
+}
+.container-main{
+    position: relative;
+    z-index: 1;
+}
+.carousel-item img {
+    width: 100%; 
+    max-height: 100vh;
+    height: 70vh; 
+    object-fit: cover; 
+    background-position: top;
+}
+.btnHome, .txtSlider{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.txtSlider > h2{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.521);
+    backdrop-filter: blur(5px);
+    padding: 5px;
+    font-family: var(--fonte-principal);
+    border-radius: 5px;
+    font-size: 2vw;
+}
+.btnSlider{
+    height: 50px;
+    width: 130px;
+    border-radius: 10px;
+    border: 1px solid white;
+    background-color: #03a64aa6;
+    color: white;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    font-weight: bold;
+}
+.btnSlider:hover{
+    background-color: #03a64a;
+    transition: .4s ease-in-out;
+}
+.resumeAbout{
+    width: 100%;
+    margin: 60px auto;
+    background-color: var(--cor-About);
+}
+.slider{
+    position: relative;
+    z-index: 3;
+    border-bottom: 5px solid var(--cor-primaria);
+}
+.content-About{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 30px;
+    color: white;
+    top: 35%;
+}
+.imgAbout {
+    width: 100%; 
+    max-width: 500px;
+    height: auto; 
+    overflow: hidden; 
+}
+.imgAbout img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    border-radius: 15px;
+    padding: 10px;
+}
+.txtAbout{
+    text-indent: 15px;
+    padding: 20px;
+}
+.cards-atividades{
+    background-color: white;
+    position: relative;
+    z-index: 3;
+}
+.title-atvd{
+    padding: 25px;
+}
+.title-atvd h2{
+    width: 50%;
+    text-align: center;
+    background-image: linear-gradient(45deg, #0578A6, #022E40);
+    color: white;
+    padding: 10px;
+}
+.container-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding: 20px;
+}
+.card{
+    width: 300px;
+   box-shadow: 0px 0px 20px #858585;
+    border: 1px solid var(--cor-primaria);
+}
+.card .imgCard, .imgCard img{
+    width: 100%;
+}
+.imgCard{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+.imgCard img{
+    width: 100%;
+    height: 100%;
+}
+.card .imgCard img, .card{
+    border-radius: 10px 10px 0 0;
+}
+.iconCard{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconCard img{
+    height: 100%;
+}
+.txtCard{
+    display: flex;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.btnSM{
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    align-items: center;
+}
+.btnSM button{
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: #03A64A;
+    color: white;
+    cursor: pointer;
+}
+.btnSM button a{
+    color: white;
+    text-decoration: none;
+}
+
+@media(max-width: 930px){
+    .content-About{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 0;
+    }
+    .card03{
+        grid-column: 1 / -1;
+    }
+}
+@media(max-width: 700px){
+    .txtSlider h2{
+        font-size: 6vw;
+        text-align: center;
+    }
+    .content-About{
+        position: static;
+    }
+    .title-atvd h2{
+        font-size: 6vw;
+        width: 70%;
+    }
+    .txtAbout p{
+        font-size: 4vw;
+        padding: 10px;
+    }
+    .container-card{
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .card03{
+        grid-column: 1;
+    }
+    
+}
