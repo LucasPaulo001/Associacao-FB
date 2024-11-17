@@ -2,7 +2,7 @@
 .presentation {
   --presentation-height: calc(100vh - 200px);
   min-height: var(--presentation-height);
-  background-image: url(../assets/images/content/img10.jpeg) ;
+  background-image: url(../assets/images/content/img10.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,7 +47,7 @@
 
 .cards {
   padding-block: 20px;
-  
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -57,13 +57,12 @@
   width: 100%;
 
 }
+
 @media (min-width: 1000px) {
   .cards {
     max-width: 1300px;
     bottom: 35px;
   }
-
-
 }
 
 .card {
@@ -106,3 +105,126 @@ pegar valor de transparencia de card
 
 
 /* Section Team */
+
+.team {
+  background-color: var(--cor-secundaria);
+  padding: 0.5rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.team h1 {
+  background: var(--cor-primaria) ;
+  font-family: var(--fonte-principal);
+  color: #fff;
+  padding: 5px 5px;
+  margin-top: 1rem;
+  align-self: center;
+}
+
+.team-container {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  width: 100%;
+  max-width: 657px;
+}
+
+@media (min-width: 1000px) {
+  .team-container {
+    max-width: 1300px;
+  }
+}
+
+.employee {
+  border: 2px solid var(--cor-primaria);
+  border-radius: 1rem;
+
+  background-image: url(../assets/images/content/img10.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.employee > div {
+  position: absolute;
+  text-align: center;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  width: 100%;
+  bottom: 0px;
+  background-color: rgba(255, 255, 255, 0.466);
+  color: var(--cor-secundaria);
+  font-family: var(--fonte-principal);
+  font-size: 1.5rem;
+}
+
+.employee > div > p {
+  color: black;
+}
+
+.flip-box {
+  width: 100%;
+  aspect-ratio: 1/1.6;
+  border-radius: 1rem;
+}
+
+@media (min-width: 500px) {
+  .flip-box {
+    flex-basis: 214px;
+    flex-grow: 1;
+  }
+}
+
+.flip-content {
+  width: 100%;
+  aspect-ratio: 1/1.6;
+  border-radius: 1rem;
+
+  position: relative;
+  transform-style: preserve-3d;
+
+  transition: transform 1s;
+}
+
+.flip-front, .flip-back {
+  background-color: #60f560;
+  width: 100%;
+  aspect-ratio: 1/1.6;
+  border-radius: 1rem;
+
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.flip-back {
+  background-color: var(--cor-primaria);
+  transform: rotateY(180deg);
+  padding: 1rem;
+  font-family: var(--fonte-principal);
+  font-size: 1.2rem;
+  text-align: center;
+  color: white;
+}
+
+
+.flip-back > h3 {
+  padding-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.flip-box:hover .flip-content {
+  transform: rotateY(180deg);
+}
+
+.btn-ver-mais {
+  background-color: #30c530;
+  color: white;
+  font-family: sans-serif;
+  padding: 0.5rem 2rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
