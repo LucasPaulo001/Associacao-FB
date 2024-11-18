@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONG-AFB</title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/homePage.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
 </head>
 
 <body>
@@ -107,6 +110,39 @@
                 </div>
             </div>
         </section>
+
+        <!-- Parte de galeria de momentos -->
+        <section class="galeryProjects">
+            <div class="titleGalery">
+                <h2>Nossos Momentos</h2>
+            </div>
+            <!-- Container com os cards -->
+            <div class="containerMainSwiper">
+                <div class="containerCardsPj mySwiperCard">
+                    <div class="cardsContent swiper-wrapper">
+                        <div class="cardProject swiper-slide">
+                            <div title="Clique e arraste para a esquerda para mudar de tema" class="capaProject" onclick="
+                                openJunineGalery()">
+                                <img src="assets/images/icons/26622166_7251084.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="cardProject swiper-slide">
+                            <div class="capaProject" onclick="openGaleryChildren()">
+                                <img src="assets/images/icons/diaDasCriancas.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="cardProject swiper-slide">
+                            <div class="capaProject">
+                                <img src="assets/images/icons/diaDasMaes.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Parte de cards de atividades -->
         <section class="cards-atividades">
             <div class="title-atvd">
                 <h2>Nossas atividades</h2>
@@ -152,10 +188,73 @@
         </section>
 
     </main>
+    <!-- Janelas da galeria de momentos --- (Festas Juninas) -->
+    <div class="janelaGalery" id="janelaGalery">
+        <!-- Janela interna da galeria -->
+        <div class="galery">
+            <!-- Botão de fechamento da galeria -->
+            <div class="btnCloseGalery" id="closeGalery">
+                <span class="material-symbols-outlined closeGalery" id="closeGalery">
+                    close
+                </span>
+            </div>
+            <!-- Corpo da galeria, onde teremos Fotos e vídeos -->
+            <div class="bodyGalery">
+                <!-- section comm o slider de fotos -->
+                <div class="fotos mySwiper">
+                    <div class="fotosContainer swiper-wrapper">
+                        <div class="slide swiper-slide">
+                            <img src="assets/images/content/imgGaleryHome/festasJuninas/festaJunina01.jpeg" alt="">
+                        </div>
+                        <div class="slide swiper-slide">
+                            <img src="assets/images/content/imgGaleryHome/festasJuninas/festaJunina02.jpeg" alt="">
+                        </div>
+                        <div class="slide swiper-slide">
+                            <img src="assets/images/content/imgGaleryHome/festasJuninas/festaJunina04.jpeg" alt="">
+                        </div>
+                        <div class="slide slideVideo swiper-slide">
+                            <video controls="true" preload="none" src="assets/images/content/festaJuninaVideo.mp4"></video>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Janela dia das Crianças/janela externa -->
+    <div class="janelaDiaCrianca" id="janelaCrianca">
+        <!-- Botão de fechamento da galeria -->
+        <div class="btnCloseGalery" id="closeGalery">
+            <span class="material-symbols-outlined closeGalery" id="closeGalery">
+                close
+            </span>
+        </div>
+        <!-- Janela interna -->
+        <div class="galeryDiaCrianca mySwiperChildren">
+            <div class="galeryCrianca swiper-wrapper">
+                <div class="sliderCrianca swiper-slide">
+                    <video preload="none" controls="true" src="assets/videos/diaDasCriancas.mp4"></video>
+                </div>
+                <div class="sliderCrianca">
+                    <video preload="none" controls="true" src="assets/videos/diaDasCriancas02.mp4"></video>
+                </div>
+                <div class="sliderCrianca swiper-slide">
+                    <video preload="none" controls="true" src="assets/videos/diaDasCriancas02.mp4"></video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <footer>
 
     </footer>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/animationGalery.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/galeryHome.js"></script>
+    
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
