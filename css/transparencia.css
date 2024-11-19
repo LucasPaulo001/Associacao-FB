@@ -1,0 +1,23 @@
+:root{
+    /*Cores do header*/
+    --cor-primaria: #0578A6;
+    --cor-secundaria: #022E40;
+
+    /*Fonte principal*/
+    --fonte-principal: "Merriweather Sans";
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    border-bottom: 3px solid white;
+}
+.banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.docs{
+    height: 100vh;
+    background-color: var(--cor-secundaria);
+}
