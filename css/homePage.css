@@ -145,11 +145,6 @@ body{
     visibility: hidden;
     transition: .4s ease-in-out;
 }
-/* .galeryCrianca{
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-} */
 .sliderCrianca{
     width: 100%;
     display: flex;
@@ -157,10 +152,14 @@ body{
     height: 100%;
     align-items: center;
 }
+.sliderCrianca.swiper-slide{
+    display: flex;
+    align-items: center;
+}
 .galeryDiaCrianca{
     width: 100%;
     max-width: 600px;
-    height: 300px;
+    height: 100%;
     margin: 20px auto;
 }
 .sliderCrianca video{

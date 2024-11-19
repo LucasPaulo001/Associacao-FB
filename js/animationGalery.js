@@ -23,15 +23,19 @@ var swiperCards = new Swiper(".mySwiperCard", {
 });
 
 var swiperChildren = new Swiper(".mySwiperChildren", {
-  grabCursor: true,
-  effect: "creative",
-  creativeEffect: {
-    prev: {
-      shadow: true,
-      translate: [0, 0, -400],
+  effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
     },
-    next: {
-      translate: ["100%", 0, 0],
+    pagination: {
+      el: ".swiper-pagination",
     },
-  },
-});
+  });
+    
