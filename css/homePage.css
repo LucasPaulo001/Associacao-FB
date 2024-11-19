@@ -120,10 +120,7 @@ body{
     border-radius: 10px;
     cursor: pointer;
 }
-.capaProject:active{
-    transform: rotate(30deg);
-    transition: .2s;
-}
+
 .capaProject img:hover{
     box-shadow: 0 0 20px 2px black;
     transition: .4s ease-in-out;
@@ -292,6 +289,12 @@ body{
 .btnSM button a{
     color: white;
     text-decoration: none;
+}
+.btnCloseGalery{
+    position: absolute;
+    top: 0;
+    z-index: 999;
+    right: 50%;
 }
 
 @media(max-width: 930px){
