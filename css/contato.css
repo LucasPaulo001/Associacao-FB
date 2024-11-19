@@ -78,7 +78,7 @@ body{
     animation: mapAnimator 1s infinite ease-in-out;
     cursor: pointer;
 }
-.left, .right{
+.left{
     padding-top: 50px;
     display: flex;
     flex-direction: column;
@@ -86,6 +86,10 @@ body{
     gap: 20px;
 }
 .right{
+    gap: 30px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
 .janelaMapa{
@@ -174,7 +178,17 @@ body{
     background-image: linear-gradient(to top, #D91E98, #A31CA6, #6F1FBF);
 }
 #socialMedias.styleFace{
-    background-image: linear-gradient(to left, #0511F2, #4147BF, #37538C);
+    background-image: linear-gradient(to top, #0511F2, #4147BF, #37538C);
+}
+#socialMedias.styleYoutube{
+    background-image: linear-gradient(to left, #F20505, #F25252, #F2B6B6);
+}
+#youtube a img{
+    border-radius: 50%;
+}
+#youtube a img:hover{
+    border: 1px solid white;
+    transition: .4s ease-in-out;
 }
 .iconMedia{
     width: 90px;
@@ -190,10 +204,10 @@ body{
 .imgContact{
     width: 100%;
     max-width: 500px;
-}
+} 
 .imgContact img{
     width: 100%;
-}
+} 
 
 @keyframes mapAnimator {
     0%{

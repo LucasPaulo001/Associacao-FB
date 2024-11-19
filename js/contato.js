@@ -19,16 +19,25 @@ iconMedia.forEach((element) => {
             social.classList.add('styleWhats');
             social.classList.remove('styleInsta');
             social.classList.remove('styleFace');
+            social.classList.remove('styleYoutube');
         }
         if(rede.target.id === 'instagram'){
             social.classList.add('styleInsta');
             social.classList.remove('styleWhats');
             social.classList.remove('styleFace');
+            social.classList.remove('styleYoutube');
         }
         if(rede.target.id === 'facebook'){
             social.classList.add('styleFace');
             social.classList.remove('styleInsta');
             social.classList.remove('styleWhats');
+            social.classList.remove('styleYoutube');
+        }
+        if(rede.target.id === 'youtube'){
+            social.classList.add('styleYoutube');
+            social.classList.remove('styleInsta');
+            social.classList.remove('styleWhats');
+            social.classList.remove('styleFace');
         }
     });
 });
