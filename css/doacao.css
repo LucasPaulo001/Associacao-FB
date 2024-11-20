@@ -78,8 +78,13 @@ main {
     height: 100%;
     display: flex;
     width: 45%;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
+}
+
+#donation-page-body-right {
+    color: white;
+    flex-direction: column;
 }
 
 #donation-page-body-left-main {
@@ -110,6 +115,10 @@ main {
     justify-content: center;
 }
 
-#qrcode-doacao {
+#donation-qr-code {
     width: 66%;
+}
+
+#donation-text-before-qr-code {
+    margin-bottom: 10%
 }
