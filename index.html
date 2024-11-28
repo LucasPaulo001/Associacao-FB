@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/homePage.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -44,10 +44,10 @@
                     <ul>
                         <li><a href="index.html">Início</a></li>
                         <li><a href="">Quem Somos</a></li>
-                        <li><a href="">Transparência</a></li>
+                        <li><a href="pages/transparencia.html">Transparência</a></li>
                         <li><a href="">Atividades</a></li>
                         <li><a href="">Doação</a></li>
-                        <li><a href="">Contato</a></li>
+                        <li><a href="pages/contato.html">Contato</a></li>
                     </ul>
                     <!-- Logo no menu mobile -->
                     <div class="LogoInMenu">
@@ -142,11 +142,148 @@
 
         </section>
 
+        <!-- Parte de depoimentos -->
+        <section class="containerDepoimentos">
+            <!-- Elementos da esquerda da sessão -->
+            <div class="elementsLeft">
+                <h1>Testemunhos</h1>
+                <img src="assets/images/icons/imgTalk.png" alt="">
+            </div>
+            <!-- Elementos do depoimento -->
+            <div class="contentDepoimentos mySwiperDep">
+                <div class="depoimentos swiper-wrapper">
+                    <div class="sliderDep swiper-slide">
+                        <div class="iconDep">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        <div class="txtDep">
+                            <p>Como não se orgulhar desse trabalho? Parabéns aos envolvidos, em especial ao presidente.</p>
+                        </div>
+                        <div class="person">
+                            <div class="iconPerson">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                            <div class="namePerson">
+                                <span>Aline Alves</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sliderDep swiper-slide">
+                        <div class="iconDep">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        <div class="txtDep">
+                            <p>Uma associação que faz a diferença na comunidade. Parabéns! </p>
+                        </div>
+                        <div class="person">
+                            <div class="iconPerson">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                            <div class="namePerson">
+                                <span>Andreia Ribeiro</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sliderDep swiper-slide">
+                        <div class="iconDep">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        <div class="txtDep">
+                            <p>Vocês estão de parabéns! Jesus continue abençoando sempre.</p>
+                            
+                        </div>
+                        <div class="person">
+                            <div class="iconPerson">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                            <div class="namePerson">
+                                <span>Rosilma Marques</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sliderDep swiper-slide">
+                        <div class="iconDep">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        <div class="txtDep">
+                            <p>Essa equipe é nota 1000! </p>
+                            
+                        </div>
+                        <div class="person">
+                            <div class="iconPerson">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                            <div class="namePerson">
+                                <span>Andréa Alves</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sliderDep swiper-slide">
+                        <div class="iconDep">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        <div class="txtDep">
+                            <p>Parabéns a equipe maravilhosa que a Associação tem, belo trabalho! </p>
+                            
+                        </div>
+                        <div class="person">
+                            <div class="iconPerson">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                            <div class="namePerson">
+                                <span>Marcilânia Fernandes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sliderDep swiper-slide">
+                        <div class="iconDep">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        <div class="txtDep">
+                            <p>Eu amo fazer parte dessa Associação! Equipe nota 10! </p>
+                            
+                        </div>
+                        <div class="person">
+                            <div class="iconPerson">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                            <div class="namePerson">
+                                <span>Iraneide Freitas</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sliderDep swiper-slide">
+                        <div class="iconDep">
+                            <i class="bi bi-quote"></i>
+                        </div>
+                        <div class="txtDep">
+                            <p>Orgulho em fazer parte desse trabalho!</p>
+                            
+                        </div>
+                        <div class="person">
+                            <div class="iconPerson">
+                                <i class="bi bi-person-circle"></i>
+                            </div>
+                            <div class="namePerson">
+                                <span>Ana Joice</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Botões do depoimento -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
         <!-- Parte de cards de atividades -->
         <section class="cards-atividades">
+            <!-- Título -->
             <div class="title-atvd">
                 <h2>Nossas atividades</h2>
             </div>
+            <!-- Container com os cards -->
             <div class="container-card">
                 <div class="card">
                     <div class="imgCard">
@@ -182,6 +319,7 @@
                     </div>
                 </div>
             </div>
+            <!-- Botão para ir para a página de atividades -->
             <div class="btnSM">
                 <button><a href="">Saiba Mais</a></button>
             </div>

@@ -296,7 +296,75 @@ body{
     z-index: 999;
     right: 50%;
 }
-
+/*Parte de depoimentos*/
+.containerDepoimentos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: 100vh; */
+    justify-items: center;
+    padding-top: 50px;
+    border-top: 3px solid #005679;
+    color: white;
+    padding-bottom: 40px;
+}
+.contentDepoimentos{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    overflow: hidden;
+    position: relative;
+    margin: 15px;
+    height: 80%;
+    box-shadow: 0px 0px 20px 0px var(--cor-primaria);
+}
+.contentDepoimentos:active{
+    box-shadow: 0px 0px 30px 10px var(--cor-primaria);
+}
+.iconDep .bi{
+    font-size: 6vw;
+}
+.elementsLeft img{
+    width: 65%;
+}
+.elementsLeft{
+    display: grid;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20% 1fr;
+    justify-items: center;
+}
+.sliderDep{
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    width: 90%;
+    padding: 15px;
+}
+.sliderDep.swiper-slide{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    cursor: grab;
+    padding: 40px;
+}
+.sliderDep.swiper-slide:active{
+    cursor: grabbing;
+}
+.person{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 10px 0;
+}
+.person .bi{
+    font-size: 3vw;
+}
+.namePerson span{
+    color: rgba(0, 0, 0, 0.637);
+}
 @media(max-width: 930px){
     .content-About{
         display: flex;
@@ -316,9 +384,9 @@ body{
      .galery{
         width: 80%;
     }
-    /* .slide img{
-        width: 100%;
-    } */
+    .contentDepoimentos{
+        height: 100%;
+    }
 }
 @media(max-width: 768px){
     .txtSlider h2{
@@ -364,5 +432,26 @@ body{
     .galeryProjects{
         display: flex;
         flex-direction: column;
+    }
+    .containerDepoimentos{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        padding-bottom: 50px;
+    }
+    .elementsLeft img{
+        height: 90%;
+    }
+    .iconDep .bi{
+        font-size: 20vw;
+    }
+    .contentDepoimentos{
+        height: 100%;
+    }
+    .person, .txtDep{
+        font-size: 3vw;
+    }
+    .iconPerson .bi{
+        font-size: 6vw;
     }
 }
