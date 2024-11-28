@@ -25,6 +25,7 @@ header{
     transition: .4s;
     font-family: var(--fonte-principal);
 }
+
 header.scroll{
     padding-top: 0;
 }
