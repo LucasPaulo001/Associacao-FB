@@ -8,6 +8,11 @@
     /*Fonte principal*/
     --fonte-principal: "Merriweather Sans";
 }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 body{
     background-color: var(--cor-secundaria);
@@ -81,6 +86,10 @@ body{
 .sectionActivities{
     background-color: white;
     padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sectionActivities h2{
@@ -95,7 +104,7 @@ body{
 
 }
 
-.actividad img{
+/* .actividad img{
     border-radius: 50%;
     width: 95%;
     padding: 80px 0;
@@ -103,7 +112,7 @@ body{
     max-width: 450px;
     margin-top: 50px;
     height: 560px;
-}
+} */
 /* 
 .actividad{
     display: flex;
@@ -123,14 +132,39 @@ body{
     flex-direction: column;
     gap: 30px;
 } */
-
-.conteudo{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 20px;
+.container{
+    display: flex;
+    justify-items: center;
+    flex-direction: row;
     justify-content: center;
-    grid-template-rows: 70%;
+    gap: 29px;
+    margin-top: 40px;
+    max-width: 85%;
+}
+.container .img{
+    width: 400px;
+    max-width: 400px;
+    display: flex;
+    height: 100%;
+    border-radius: 51%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+
+}
+.img img{
+    height: 400px;
+    width: 400px;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.txt-content{
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .conteudo p{
@@ -146,4 +180,6 @@ body{
     display: flex;
     flex-direction: column;
     gap: 30px;
+    padding: 10px;
+    width: 100%;
 }
