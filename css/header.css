@@ -24,6 +24,8 @@ header{
     padding: 15px 0 15px;
     transition: .4s;
     font-family: var(--fonte-principal);
+
+    z-index: -1;
 }
 header.scroll{
     padding-top: 0;
