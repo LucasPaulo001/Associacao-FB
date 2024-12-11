@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Itim&family=Junge&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    /*Cores do header*/
+    --cor-primaria: #0578A6;
+    --cor-secundaria: #022E40;
+
+    /*Fonte principal*/
+    --fonte-principal: "Merriweather Sans";
+}
+body{
+    background-color: var(--cor-secundaria);
+    z-index: 1;
+    position: relative;
+}
+.banner{
+    height: 60vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+.banner img{
+    width: 100%;
+    background-color: black;
+    object-fit: cover;
+    height: 100%;
+}
+.title-banner{
+    position: absolute;
+    bottom: 0;
+    color: white;
+    top: 50%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: var(--fonte-principal);
+    font-size: 2vw;
+    height: 50px;
+}
+.title-banner h2{
+    height: 100%;
+    background-image: linear-gradient(45deg, #0578a694, #022e40a3);
+    backdrop-filter: blur(2px);
+    padding: 0px 10px 0;
+    border-radius: 5px;
+    height: 100%;
+}
+.container-contato{
+    z-index: -1;
+    position: relative;
+}
+.content-contact{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    color: rgb(0, 0, 0);
+    padding-bottom: 40px;
+}
+.cardContact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: var(--fonte-principal);
+    gap: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+.icon{
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+}
+.icon img{
+    width: 30%;
+    padding: 10px;
+}
+.iconMap img{
+    animation: mapAnimator 1s infinite ease-in-out;
+    cursor: pointer;
+}
+.left{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+.right{
+    gap: 30px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.janelaMapa{
+    background-color: #000000a8;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: .4s ease-in-out;
+}
+.janelaMapa.ativeMap{
+    height: 100vh;
+    overflow: visible;
+    visibility: visible;
+}
+.janelaMapa.ativeMap .mapa iframe{
+    height: 450px;
+    width: 600px;
+    overflow: visible;  
+    visibility: visible;
+}
+.mapa{
+    position: relative;
+}
+.mapa iframe{
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: .4s ease-in-out;
+}
+.txt{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+    align-items: center;
+}
+.mapa iframe{
+    border-radius: 15px;
+}
+#btnClose{
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    border-radius: 50%;
+    height: 35px;
+    width: 35px;
+    border: 1px solid red;
+    color: #ffffff;
+    background-color: #ff0000b0;
+    cursor: pointer;
+}
+.iconMap img:hover{
+    animation: mapAnimator .3s infinite;
+}
+.cardContact:hover .iconPhone img{
+    animation: phoneAnimator .2s ease-in-out;
+} 
+.cardContact:hover .iconEmail img{
+   animation: envAnimator .2s ease-in-out;
+}
+.socialMedias{
+    display: flex;
+    flex-direction: row;
+    padding: 20px; 
+    justify-content: center; 
+    background-color: white;
+    gap: 30px;
+    border-radius: 10px; 
+}
+.cardMedia{
+    display: flex;
+    justify-content: center;
+}
+.socialMedias.styleWhats{
+    background-image: linear-gradient(to right, #0DF205, #2FA61C, #93D989);
+}
+#socialMedias.styleInsta{
+    background-image: linear-gradient(to top, #D91E98, #A31CA6, #6F1FBF);
+}
+#socialMedias.styleFace{
+    background-image: linear-gradient(to top, #0511F2, #4147BF, #37538C);
+}
+#socialMedias.styleYoutube{
+    background-image: linear-gradient(to left, #F20505, #F25252, #F2B6B6);
+}
+#youtube a img{
+    border-radius: 50%;
+}
+#youtube a img:hover{
+    border: 1px solid white;
+    transition: .4s ease-in-out;
+}
+.iconMedia{
+    width: 70px;
+}
+.iconMedia img{
+    width: 100%;
+    cursor: pointer;
+}
+.iconMedia img:hover{
+    transform: scale(1.2);
+    transition: .2s;
+}
+.imgContact{
+    width: 100%;
+    max-width: 500px;
+} 
+.imgContact img{
+    width: 100%;
+} 
+
+@keyframes mapAnimator {
+    0%{
+        transform: scale(1.0);
+    }
+    50%{
+        transform: scale(.8);
+    }
+    100%{
+        transform: scale(1.0);
+    }
+}
+@keyframes envAnimator {
+    0%{
+        transform: translate3d(0, 10px, 0);
+    }
+    50%{
+        transform: translate3d(0, -10px, 0);
+    }
+    100%{
+        transform: translate3d(0, 10px, 0);
+    }
+}
+@keyframes phoneAnimator {
+    from{
+        transform: rotate(80deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}
+@media(max-width: 750px){
+    .mapa{
+        width: 70%;
+    }
+    .imgContact{
+        display: none;
+    }
+    .mapa iframe{
+        width: 100% !important;
+    }
+    .content-contact{
+        grid-template-columns: 1fr;
+    }
+    .title-banner h2{
+        display: flex;
+        align-items: center;
+        width: 90%;
+        justify-content: center;
+        font-size: 6vw;
+    }
+    .left, .right{
+        width: 80%;
+    }
+    .cardContact .txt{
+        font-size: 3vw;
+    }
+    .socialMedias{
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        justify-content: center;
+        gap: 0;
+    }
+    .socialMedias img{
+        width: 60%;
+    }
+}

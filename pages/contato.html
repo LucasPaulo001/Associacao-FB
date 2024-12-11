@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG-AFB</title>
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/contato.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header id="header">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="../assets/images/icons/logo.png" alt="" height="130px">
+        </div>
+        <!-- Nome da associação e o menu de navegação -->
+        <div class="content-right">
+            <div class="title">
+                <h1>Associação Francisca Bandeira</h1>
+            </div>
+            <!-- Ícone do menu mobile -->
+            <div class="menuMobile" onclick="openMenu()" id="iconMobile">
+                <div class="iconMobile">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+            </div>
+            <!-- menu -->
+            <div class="menu" id="menu">
+                <span class="material-symbols-outlined" id="closeMenu">
+                    close
+                </span>
+                <div class="content-menu">
+                    <ul>
+                        <li><a href="">Início</a></li>
+                        <li><a href="">Quem Somos</a></li>
+                        <li><a href="">Transparência</a></li>
+                        <li><a href="">Atividades</a></li>
+                        <li><a href="">Doação</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
+                    <!-- Logo no menu mobile -->
+                    <div class="LogoInMenu">
+                        <img src="../assets/images/icons/logo.png" alt="" height="150px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Parte principal com as formas de contato -->
+    <main class="container-contato">
+        <!-- banner da página -->
+        <section class="banner">
+            <img src="../assets/images/content/banner-doação 1.png" alt="">
+            <div class="title-banner">
+                <h2>Entre em contato conosco</h2>
+            </div>
+        </section>
+        <!-- Contatos -->
+        <section class="content-contact">
+            <div class="left">
+                <div class="cardContact map">
+                    <div class="icon iconMap">
+                        <img onclick="openMap()" src="../assets/images/icons/mapa 1.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <h2>Nossa Localização</h2>
+                        <p>Cajazeiras, Rua Senador Roberto Kennedy, 110. Casas Populares.</p>
+                    </div>
+                </div>
+                <div class="cardContact contatoTel">
+                    <div class="icon iconPhone">
+                        <img src="../assets/images/icons/telefone 1.png" alt="">
+                    </div>
+                    <div class="txt">
+                        <h2>Número(s) de telefone</h2>
+                        <p>(83)99165-6662</p>
+                        <p>(83)99105-4557</p>
+                    </div>
+                </div>
+                <div class="cardContact email">
+                    <div class="icon iconEmail">
+                        <img src="../assets/images/icons/gmail 1.png"  alt="">
+                    </div>
+                    <div class="txt">
+                        <h2>Nosso E-mail</h2>
+                        <a href="mailto:associacaofranciscabandeira@gmail.com">
+                            <p>associacaofranciscabandeira@gmail.com</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="cardMedia">
+                    <div class="socialMedias" id="socialMedias">
+                        <div class="whatsapp" id="wha">
+                            <div class="iconMedia iconWa" id="whatsapp">
+                                <a href="https://wa.me/5583991656662
+                                " target="_blank"><img src="../assets/images/icons/whatsapp 1.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="insta">
+                            <div class="iconMedia iconInsta" id="instagram">
+                                <a href="https://www.instagram.com/associacaofranciscabandeira?igsh=MXZvZ2NuZTVic3ZqZw==" target="_blank"><img src="../assets/images/icons/instagram 1.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="facebook">
+                            <div class="iconMedia iconF" id="facebook">
+                                <a href="https://www.facebook.com/FranciscaBandeira" target="_blank"><img src="../assets/images/icons/facebook 1.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="youtube">
+                            <div class="iconMedia iconY" id="youtube">
+                                <a href="https://www.youtube.com/@ONG-AFB" target="_blank"><img src="../assets/images/icons/youtube.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="imgContact">
+                    <img src="../assets/images/content/contactImg.png" alt="">
+                </div> 
+            </div>
+        </section>
+    </main>
+    <!-- Janela com o mapa -->
+    <div class="janelaMapa" id="janelaMapa">
+        <div class="mapa" id="mapa">
+            <div class="btnCloseMap">
+                <button id="btnClose">
+                    <span class="material-symbols-outlined" id="close">
+                        close
+                    </span>
+                </button>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.57289343073896!2d-38.562497358015975!3d-6.870668208621348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7a473f0be686795%3A0x9ae1d1270a555f17!2sR.%20Sen.%20Roberto%20Kenedy%2C%20110%20-%20Lot.%20Casas%20Populares%2C%20Cajazeiras%20-%20PB%2C%2058900-000!5e0!3m2!1spt-PT!2sbr!4v1731979042341!5m2!1spt-PT!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <!-- Footer das páginas -->
+    <footer>
+        <div class="content-footer">
+            <div class="footer-option contact">
+                <div class="title">
+                    <h2>Contato</h2>
+                </div>
+                <div class="txt">
+                    <ul class="listFooter">
+                        <li>Associação Francisca Bandeira</li>
+                        <li>CNPJ 27.782.392/0001-44</li>
+                        <li>Endereço: Rua Senador Roberto Kennedy, 110. Casas Populares</li>
+                        <li>(83) 99165-6662</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-option linesDetails">
+                <div class="title">
+                    <h2>Mapa</h2>
+                </div>
+                <div class="txt">
+                    <ul class="listFooter link">
+                        <li><a href="">Início</a></li>
+                        <li><a href="">Quem somos</a></li>
+                        <li><a href="">Transparência</a></li>
+                        <li><a href="">Atividades</a></li>
+                        <li><a href="">Doação</a></li>
+                        <li><a href="">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-option img">
+                <img src="../assets/images/icons/logo.png" alt="" height="250px">
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script src="../js/contato.js"></script>
+</body>
+
+</html>
