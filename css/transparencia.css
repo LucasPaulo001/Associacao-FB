@@ -46,6 +46,7 @@
 
 #docs{
     padding: 20px;
+    padding-bottom: 50px;
     color: white;
     font-family: var(--fonte-principal);
     background-color: var(--cor-secundaria);
