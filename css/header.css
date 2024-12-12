@@ -67,6 +67,7 @@ header.scroll .content-right{
     gap: 15px;
     align-items: center;
     font-size: 1.7vw;
+    margin-bottom: 0 !important;
 }
 .content-menu li a{
     color: white;

@@ -56,7 +56,6 @@
     flex-direction: column;
     gap: 25px;
     align-items: center;
-    height: 100vh;
     justify-content: space-evenly;
 }
 .areaLine{
