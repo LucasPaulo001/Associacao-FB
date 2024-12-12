@@ -27,6 +27,15 @@ header{
 }
 header.scroll{
     padding: 0;
+    top: 0;
+    padding: 15px 0 15px;
+    transition: .4s;
+    font-family: var(--fonte-principal);
+
+    z-index: -1;
+}
+header.scroll{
+    padding-top: 0;
 }
 header.scroll .content-right{
     gap: 15px;
@@ -44,6 +53,7 @@ header.scroll .content-right{
     font-size: 30px;
     display: flex;
 }
+
 .content-right .title{
     width: 100%;
 }
