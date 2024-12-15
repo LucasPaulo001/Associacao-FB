@@ -221,6 +221,7 @@ body{
     background-color: white;
     position: relative;
     z-index: 3;
+    padding: 0 0 60px;
 }
 .title-atvd{
     padding: 25px;

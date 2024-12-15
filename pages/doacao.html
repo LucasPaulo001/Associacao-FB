@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONG-AFB</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/doacao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Cabeçalho -->
+    <header id="header">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="../assets/images/icons/logo.png" alt="" height="130px">
+        </div>
+        <!-- Nome da associação e o menu de navegação -->
+        <div class="content-right">
+            <div class="title">
+                <h1>Associação Francisca Bandeira</h1>
+            </div>
+            <!-- Ícone do menu mobile -->
+            <div class="menuMobile" onclick="openMenu()" id="iconMobile">
+                <div class="iconMobile">
+                    <span class="material-symbols-outlined">
+                        menu
+                    </span>
+                </div>
+            </div>
+            <!-- menu -->
+            <div class="menu" id="menu">
+                <span class="material-symbols-outlined" id="closeMenu">
+                    close
+                </span>
+                <div class="content-menu">
+                    <ul>
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="quemsomos.html">Quem Somos</a></li>
+                        <li><a href="transparencia.html">Transparência</a></li>
+                        <li><a href="atividades.html">Atividades</a></li>
+                        <li><a href="doacao.html">Doação</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                    <!-- Logo no menu mobile -->
+                    <div class="LogoInMenu">
+                        <img src="assets/images/icons/logo.png" alt="" height="150px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Conteúdo -->
+    <main>
+        <!-- Imagem e frase -->
+        <div id="main-image-container">
+            <!-- Imagem -->
+            <img id="main-image" src="../assets/images/content/banner-doacao1.png"/>
+            <!-- Frase -->
+            <div id="main-image-subtitle-container">
+                <p id="main-image-subtitle">Sua doação é a chave para abrir portas de esperança e transformar vidas.</p>
+            </div>
+        </div>
+        <!-- Parte de doação -->
+        <div id="donation-page">
+            <!-- Cabeçalho -->
+            <div id="donation-page-header">
+                <p>Formas de doar</p>
+            </div>
+            <!-- Corpo -->
+            <div id="donation-page-body">
+                <!-- Parte esquerda -->
+                <div id="donation-page-body-left">
+                    <div id="donation-page-body-left-main">
+                        <!-- Imagem -->
+                        <img src="../assets/images/content/imagem-doacao.png"/>
+                        <!-- Texto -->
+                        <div id="donation-page-body-left-text-container">
+                            <p id="donation-page-body-left-text">Entre em contato</p>
+                        </div>
+                        <!-- Botão -->
+                        <a id="linkContact" href="contato.html"><button id="donation-page-body-left-button">Contato</button></a>
+                    </div>
+                </div>
+                <!-- Parte direita -->
+                <div id="donation-page-body-right">
+                    <!-- Textos -->
+                    <div id="donation-text-before-qr-code-container">
+                        <p style="font-size: x-large;">
+                            Via pix:
+                        </p>
+                        <p id="donation-text-before-qr-code" style="font-size: large;">
+                            <br>Doe com Pix e Faça a Diferença
+                            <br><br>
+                            Nossa Chave Pix
+                            <br><br>
+                            CNPJ: 27.782.392/0001-44
+                            <br><br>
+                            Ou Utilize o QR Code:
+                        </p>
+                    </div>
+                    <!-- Qr code -->
+                    <img id="donation-qr-code" src="../assets/images/content/doacao-qrcode.png"/>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer das páginas -->
+    <footer>
+        <div class="content-footer">
+            <div class="footer-option contact">
+                <div class="title">
+                    <h2>Contato</h2>
+                </div>
+                <div class="txt">
+                    <ul class="listFooter">
+                        <li>Associação Francisca Bandeira</li>
+                        <li>CNPJ 27.782.392/0001-44</li>
+                        <li>Endereço: Rua Senador Roberto Kennedy, 110. Casas Populares</li>
+                        <li>(83) 99165-6662</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-option linesDetails">
+                <div class="title">
+                    <h2>Mapa</h2>
+                </div>
+                <div class="txt">
+                    <ul class="listFooter link">
+                        <li><a href="../index.html">Início</a></li>
+                        <li><a href="quemsomos.html">Quem somos</a></li>
+                        <li><a href="transparencia.html">Transparência</a></li>
+                        <li><a href="atividades.html">Atividades</a></li>
+                        <li><a href="doacao.html">Doação</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-option img">
+                <img src="../assets/images/icons/logo.png" alt="" height="250px">
+            </div>
+        </div>
+    </footer>
+    <script src="../js/main.js"></script>
+    <script>
+        function syncWidth(baseID, alvoID) {
+            const elementoBase = document.getElementById(baseID); // Elemento que serve como referência
+            const elementoAlvo = document.getElementById(alvoID); // Elemento que receberá a largura
+
+            const larguraBase = getComputedStyle(elementoBase).width;
+            elementoAlvo.style.width = larguraBase; // Define a mesma largura
+        }
+
+        window.addEventListener('resize', syncWidth("donation-qr-code", "donation-text-before-qr-code"));
+    </script>
+</body>
+
+</html>
