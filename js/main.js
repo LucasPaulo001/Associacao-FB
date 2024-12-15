@@ -7,9 +7,3 @@ function openMenu(){
 closeMenu.addEventListener('click', () => {
     menuLateral.classList.remove('ativeMenu');
 });
-
-//Funcionalidade do header na rolagem
-window.addEventListener('scroll', () => {
-    let header = document.getElementById('header');
-    header.classList.toggle('scroll',window.scrollY > 200);
-});

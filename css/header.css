@@ -25,20 +25,6 @@ header{
     transition: .2s;
     font-family: var(--fonte-principal);
 }
-header.scroll{
-    padding: 0;
-    top: 0;
-    padding: 15px 0 15px;
-    transition: .4s;
-    font-family: var(--fonte-principal);
-    z-index: 2;
-}
-header.scroll{
-    padding-top: 0;
-}
-header.scroll .content-right{
-    gap: 15px;
-}
 .logo{
     height: 150px;
     width: 150px;
