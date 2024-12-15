@@ -165,8 +165,19 @@ body{
 .content .img{
     order: 2;
 }
-
-
+.localLineAtv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+.localLineAtv .lineAtv{
+    background-color: #022E40;
+    height: 5px;
+    width: 80%;
+    display: flex;
+    border-radius: 10px;
+}
 /* responsividade */
 
 @media(max-width: 800px){
